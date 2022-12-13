@@ -107,8 +107,6 @@ struct ContentView: View {
             //Icon
             mainImage()
             
-            
-            
             //Button
             PhotosPicker(selection: $selectedItems, matching: .images) {
                 Label("Select a photo", systemImage: "photo")

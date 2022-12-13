@@ -44,6 +44,20 @@ class EventKitManager: ObservableObject {
         }
     }
     
+    func checkEventExists(store: EKEventStore, event eventToAdd: EKEvent) -> Bool {
+        var exists = false
+        if eventToAdd.startDate == nil || eventToAdd.endDate == nil || eventToAdd.title == nil{
+            return exists
+        }
+        let predicate = store.predicateForEvents(withStart: eventToAdd.startDate, end: eventToAdd.endDate, calendars: nil)
+        let existingEvents = eventStore.events(matching: predicate)
+
+        exists = existingEvents.contains { (event) -> Bool in
+            return eventToAdd.title == event.title && event.startDate == eventToAdd.startDate && event.endDate == eventToAdd.endDate
+        }
+        return exists
+    }
+    
     func insertEvent(store: EKEventStore, data:[dateCard]) {
         
         let dateForm = DateFormatter()
@@ -52,9 +66,6 @@ class EventKitManager: ObservableObject {
         dateForm.timeZone = TimeZone.current
         
         for i in data{
-            print(i.event)
-            print(i.timeStart)
-            print(i.timeEnd)
             let start = dateForm.date(from: i.timeStart)
             let end = dateForm.date(from: i.timeEnd)
             
@@ -64,11 +75,14 @@ class EventKitManager: ObservableObject {
             newEvent.startDate = start
             newEvent.endDate = end
             newEvent.location = i.location
-            do {
-                try store.save(newEvent, span: .thisEvent, commit: true)
-            } catch {
-                print("Error saving event in calendar")             }
+            
+                do {
+                    try store.save(newEvent, span: .thisEvent, commit: true)
+                } catch {
+                    print("Error saving event in calendar")
+                    
+                }
+            }
         }
     }
-}
 
