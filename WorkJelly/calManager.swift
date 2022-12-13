@@ -52,7 +52,9 @@ class EventKitManager: ObservableObject {
         dateForm.timeZone = TimeZone.current
         
         for i in data{
-            
+            print(i.event)
+            print(i.timeStart)
+            print(i.timeEnd)
             let start = dateForm.date(from: i.timeStart)
             let end = dateForm.date(from: i.timeEnd)
             
