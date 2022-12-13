@@ -11,6 +11,8 @@
 		1B8496452948F1DE0092016E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8496442948F1DE0092016E /* ContentView.swift */; };
 		1B8496472948F1DF0092016E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8496462948F1DF0092016E /* Assets.xcassets */; };
 		1B84964A2948F1DF0092016E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8496492948F1DF0092016E /* Preview Assets.xcassets */; };
+		1B8496512948F1F70092016E /* calManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8496502948F1F70092016E /* calManager.swift */; };
+		1B8496532948F2600092016E /* mainImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8496522948F2600092016E /* mainImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		1B8496442948F1DE0092016E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B8496462948F1DF0092016E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B8496492948F1DF0092016E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1B8496502948F1F70092016E /* calManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calManager.swift; sourceTree = "<group>"; };
+		1B8496522948F2600092016E /* mainImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				1B8496422948F1DE0092016E /* WorkJellyApp.swift */,
 				1B8496442948F1DE0092016E /* ContentView.swift */,
+				1B8496522948F2600092016E /* mainImage.swift */,
+				1B8496502948F1F70092016E /* calManager.swift */,
 				1B8496462948F1DF0092016E /* Assets.xcassets */,
 				1B8496482948F1DF0092016E /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8496452948F1DE0092016E /* ContentView.swift in Sources */,
+				1B8496512948F1F70092016E /* calManager.swift in Sources */,
+				1B8496532948F2600092016E /* mainImage.swift in Sources */,
 				1B8496432948F1DE0092016E /* WorkJellyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,13 +275,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkJelly/Preview Content\"";
+				DEVELOPMENT_TEAM = G46Z332VDE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Please Allow Calander Usage";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Please Allow Contacts Access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,13 +307,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WorkJelly/Preview Content\"";
+				DEVELOPMENT_TEAM = G46Z332VDE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Please Allow Calander Usage";
+				INFOPLIST_KEY_NSContactsUsageDescription = "Please Allow Contacts Access";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
