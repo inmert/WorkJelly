@@ -9,7 +9,7 @@ import SwiftUI
 
 struct mainImage: View {
     var body: some View {
-        Image("jelly")
+        Image("workjelly")
             .resizable().frame(width: 200, height: 200)
             .offset(y: -100)
         
